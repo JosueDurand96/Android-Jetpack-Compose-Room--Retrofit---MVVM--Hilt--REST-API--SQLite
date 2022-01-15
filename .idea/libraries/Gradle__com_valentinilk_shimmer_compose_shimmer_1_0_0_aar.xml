@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.valentinilk.shimmer:compose-shimmer:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8f3d463d92e1d641e3faff82b0af9d53/transformed/jetified-compose-shimmer-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8f3d463d92e1d641e3faff82b0af9d53/transformed/jetified-compose-shimmer-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8f3d463d92e1d641e3faff82b0af9d53/transformed/jetified-compose-shimmer-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

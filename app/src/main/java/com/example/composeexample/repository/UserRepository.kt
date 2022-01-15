@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import com.example.composeexample.datasource.RestDataSource
 import com.example.composeexample.model.User
 import com.example.composeexample.model.UserDao
+import kotlinx.coroutines.delay
 import javax.inject.Inject
 
 interface UserRepository {
@@ -18,6 +19,7 @@ class UserRepositoryImpl @Inject constructor(
 ) : UserRepository {
 
     override suspend fun getNewUser(): User {
+        delay(3000)
         val name = dataSource.getUserName().results[0].name
         val location = dataSource.getUserLocation().results[0].location
         val picture = dataSource.getUserPicture().results[0].picture
