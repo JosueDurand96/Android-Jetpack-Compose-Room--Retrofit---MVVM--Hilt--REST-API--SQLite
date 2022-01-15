@@ -9,7 +9,7 @@ import javax.inject.Inject
 interface UserRepository {
     suspend fun getNewUser(): User
     suspend fun deleteUser(toDeleteUser: User)
-    suspend fun getAllUser(): LiveData<List<User>>
+    fun getAllUser(): LiveData<List<User>>
 }
 
 class UserRepositoryImpl @Inject constructor(
@@ -28,6 +28,6 @@ class UserRepositoryImpl @Inject constructor(
 
     override suspend fun deleteUser(toDeleteUser: User) = userDao.delete(toDeleteUser)
 
-    override suspend fun getAllUser(): LiveData<List<User>> = userDao.getAll()
+    override  fun getAllUser(): LiveData<List<User>> = userDao.getAll()
 
 }
