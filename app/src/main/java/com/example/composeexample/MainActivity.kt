@@ -3,11 +3,13 @@ package com.example.composeexample
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.composeexample.ui.theme.ComposeExampleTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -27,8 +29,15 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello baby $name!")
+fun Greeting(name: String,
+             viewModel: UserViewModel = hiltViewModel()
+
+) {
+    Button(onClick = {
+        viewModel.getUser()
+    }){
+
+    }
 }
 
 @Preview(showBackground = true)

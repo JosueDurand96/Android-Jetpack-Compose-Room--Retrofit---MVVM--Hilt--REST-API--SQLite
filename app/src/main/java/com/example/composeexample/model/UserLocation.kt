@@ -1,4 +1,6 @@
 package com.example.composeexample.model
 
-class UserLocation {
-}
+data class UserLocation(
+    val city: String?,
+    val state: String,
+)
