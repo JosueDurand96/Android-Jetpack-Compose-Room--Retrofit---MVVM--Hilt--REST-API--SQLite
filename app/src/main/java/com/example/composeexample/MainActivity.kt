@@ -34,7 +34,7 @@ fun Greeting(name: String,
 
 ) {
     Button(onClick = {
-        viewModel.getUser()
+       // viewModel.getUser()
     }){
 
     }
