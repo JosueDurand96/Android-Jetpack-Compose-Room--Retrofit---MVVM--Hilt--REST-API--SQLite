@@ -1,5 +1,6 @@
 package com.example.composeexample.model
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Entity(tableName = "user")
@@ -20,4 +21,10 @@ data class User(
 interface UserDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(user: User)
+
+    @Query("SELECT * FROM user ORDER BY id DESC")
+    fun getAll(): LiveData<List<User>>
+
+    @Delete
+    fun delete(user: User)
 }
