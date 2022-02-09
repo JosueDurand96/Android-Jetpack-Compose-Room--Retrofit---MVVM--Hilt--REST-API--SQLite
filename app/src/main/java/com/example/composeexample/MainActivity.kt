@@ -72,7 +72,7 @@ fun MyApp(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Use to Room + hilt+ MVVM ") },
+                title = { Text(text = "Use to Room + hilt + MVVM ") },
                 actions = {
                     IconButton(onClick = {
                         onAddClick?.invoke()
