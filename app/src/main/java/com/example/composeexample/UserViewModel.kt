@@ -20,14 +20,14 @@ class UserViewModel @Inject constructor(
         MutableLiveData<Boolean>(false)
     }
 
-    val users:LiveData<List<User>> by lazy {
+    val users: LiveData<List<User>> by lazy {
         userRepository.getAllUser()
     }
 
     val isLoading: LiveData<Boolean> get() = _isLoading
 
-    fun addUser(){
-        if (_isLoading.value == false){
+    fun addUser() {
+        if (_isLoading.value == false) {
             viewModelScope.launch(Dispatchers.IO) {
                 _isLoading.postValue(true)
                 userRepository.getNewUser()
@@ -36,7 +36,7 @@ class UserViewModel @Inject constructor(
         }
     }
 
-    fun deleteUser(toDeleteUser: User){
+    fun deleteUser(toDeleteUser: User) {
         viewModelScope.launch(Dispatchers.IO) {
             userRepository.deleteUser(toDeleteUser)
 

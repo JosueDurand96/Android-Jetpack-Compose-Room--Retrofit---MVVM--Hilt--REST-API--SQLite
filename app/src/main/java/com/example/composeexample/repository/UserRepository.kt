@@ -19,7 +19,7 @@ class UserRepositoryImpl @Inject constructor(
 ) : UserRepository {
 
     override suspend fun getNewUser(): User {
-        delay(3000)
+        //delay(1000)
         val name = dataSource.getUserName().results[0].name
         val location = dataSource.getUserLocation().results[0].location
         val picture = dataSource.getUserPicture().results[0].picture

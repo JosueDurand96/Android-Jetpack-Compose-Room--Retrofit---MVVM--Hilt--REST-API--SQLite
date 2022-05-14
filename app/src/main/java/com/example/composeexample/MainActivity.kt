@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeExampleTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
+                Surface(color = MaterialTheme.colors.onPrimary) {
                     MyAppPrincipal()
                 }
             }
@@ -65,14 +65,14 @@ fun MyAppPrincipal(
 @Composable
 fun MyApp(
     onAddClick: (() -> Unit)? = null,
-    onDeleteClick: ((toDelete :User) -> Unit)? = null,
+    onDeleteClick: ((toDelete: User) -> Unit)? = null,
     users: List<User>,
     isLoading: Boolean
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "Use to Room + hilt + MVVM ") },
+                title = { Text(text = "Meetup Dagger Hilt xD!") },
                 actions = {
                     IconButton(onClick = {
                         onAddClick?.invoke()
@@ -140,7 +140,7 @@ fun MyApp(
 fun LoadingCard() {
     Card(
         shape = RoundedCornerShape(8.dp),
-        elevation = 1.dp,
+        elevation = 2.dp,
         modifier = Modifier
             .padding(horizontal = 8.dp, vertical = 4.dp)
             .fillMaxWidth()
